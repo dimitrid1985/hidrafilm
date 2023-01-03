@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Adorable";
+    src: url('../fontes/adorable.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: "DIN Pro";
+    src: url('../fontes/dinpro-regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "DIN Pro";
+    src: url('../fontes/dinpro-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "New June";
+    src: url('../fontes/NewJune-Regular.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "New June";
+    src: url('../fontes/NewJune-Bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "New June";
+    src: url('../fontes/NewJune-Extrabold.otf');
+    font-style: normal;
+    font-weight: 800;
+}

@@ -1,0 +1,648 @@
+@import url('fonts.css');
+@import url('reset.css');
+
+:root {
+    --adorable: "Adorable", cursive;
+    --dinpro: "DIN Pro", Helvetica, Arial, sans-serif;
+    --newjune: "New June", Verdana, sans-serif;
+    --branco: #ffffff;
+    --bege_claro: #F4EEE8;
+    --bege: #D3BBA5;
+    --bodyblue: #0094D4;
+    --marinho: #110B1A;
+    --separador: 20px;
+    --width-padrao: 300px;
+    --width-padrao-desktop: 1200px;
+}
+
+/* padronização de tamanhos */
+
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.3rem;
+    margin-top: var(--separador)
+}
+
+/* Famílias de fontes */
+
+.adorable {
+    font-family: var(--adorable);
+}
+
+.dinpro {
+    font-family: var(--dinpro);
+}
+
+.newjune {
+    font-family: var(--newjune);
+}
+
+/* links */
+
+a.botao {
+    display: inline-block;
+    background-color: var(--bege);
+    padding: var(--separador);
+    color: var(--marinho);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: var(--separador);
+    border-radius: 20px;
+}
+
+a.botao i {
+    color: var(--marinho)
+}
+
+a.botao--escuro {
+    background-color: var(--marinho);
+    color: var(--branco);
+}
+
+a.botao--escuro i {
+    color: var(--branco)
+}
+
+
+/* pesos de fontes */
+
+.bold {
+    font-weight: bold;
+}
+
+.extra-bold {
+    font-weight: 800;
+}
+
+/* cores de fundo */
+
+.bg_bege {
+    background-color: var(--bege);
+}
+
+.bg_marinho {
+    background-color: var(--marinho);
+}
+
+/* cores de texto */
+
+.txt_branco *,
+.bg_marinho h3 {
+    color: var(--branco);
+}
+
+.txt_marinho *,
+h3.txt_marinho {
+    color: var(--marinho);
+}
+
+.txt_bege * {
+    color: var(--bege)
+}
+
+.txt_bodyblue {
+    color: var(--bodyblue)
+}
+
+/* propriedades */
+
+.text-only {
+    position: absolute;
+    left:-9999px;
+}
+
+.centralizado {
+    margin: 0 auto;
+    text-align: center;
+}
+
+header .wrapper,
+main section .wrapper,
+footer .wrapper {
+    padding-left: var(--separador);
+    padding-right: var(--separador);
+    margin: 0 auto;
+    max-width: var(--width-padrao-desktop);
+}
+
+/* layout do site */
+
+body {
+    font-family: var(--newjune);
+}
+
+header {
+    height: 50px;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo a {
+    display: block;
+    background-image: url('../images/logo_da_bodyblue_em_branco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 40px;
+    text-indent: -9999px;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    height: calc(100vh - 50px);
+    background-image: url('../images/mulher-tatuada.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x:60%;
+    align-items: flex-end;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(107,51,115,0.7) 65%, rgba(17,11,26,1) 90%);
+}
+
+.hero__conteudo {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: calc(var(--separador)*3)
+}
+
+.hero__conteudo h2 {
+    display: block;
+    height: 150px;
+    width: var(--width-padrao);
+    margin: 0 auto var(--separador) auto;
+    background-image: url('../images/logo_do_hidrafilm_grande_em_branco.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero__descricao_do_produto {
+    display: flex;
+    width: 290px;
+    margin: 0 auto var(--separador) auto;
+    justify-content: space-between;
+}
+
+.hero__apelo {
+    display: flex;
+    width: 290px;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: var(--separador) 0;
+    font-weight: 800;
+    align-items: center;
+}
+
+.hero__3x {
+    color: var(--marinho);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: var(--separador);
+    margin-right: var(--separador);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.hero__badges ul {
+    display: flex;
+    width: 290px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.hero__badges li {
+    height: 75px;
+    width: 30%;
+    text-indent: -9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.hero__badge--dermato {
+    background-image: url('../images/badge-dermatologicamente-testado.png');
+}
+
+.hero__badge--comprovado {
+    background-image: url('../images/badge-efetividade-comprovada.png');
+}
+
+.hero__badge--cruelty {
+    background-image: url('../images/badge-cruelty-free.png');
+}
+
+.nova_vida .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nova_vida__packshot {
+    display: block;
+    margin: 0 auto;
+}
+
+.nova_vida__conteudo {
+    max-width: var(--width-padrao);
+}
+
+.nova_vida__icones li {
+    text-align: center;
+    font-weight: bold;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.nova_vida__icone--6vitaminas::before {
+    content: '';
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: var(--separador) auto;
+    background-image: url('../images/icone-vitaminas.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nova_vida__icone--manteiga::before {
+    content: '';
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: var(--separador) auto;
+    background-image: url('../images/icone-manteiga-de-bacuri-e-ucuuba.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nova_vida__icone--litsea::before {
+    content: '';
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: var(--separador) auto;
+    background-image: url('../images/icone-oleo-essencial.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.ideal {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: calc(var(--separador)*3) 0;
+}
+
+.ideal__conteudo {
+    max-width: var(--width-padrao);
+    margin-bottom: calc(var(--separador)*3);
+}
+
+.ideal__ilustracao {
+    background-image: url('../images/mulher-com-braco-tatuado.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 70vh;
+    width: 100%;
+}
+
+.ativos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ativos h3 {
+    text-align: center;
+}
+
+.ativos__lista li {
+    max-width: var(--width-padrao);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: calc(var(--separador)*2) 0;
+}
+
+.ativos__lista li h4 {
+    text-align: center;
+}
+
+.ativos__lista li h4::after {
+    content: '';
+    width: 165px;
+    height: 165px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: var(--separador) auto 0;
+}
+
+.ativos__ativo--maychang h4::after {
+    background-image: url('../images/ativo-oleo-de-may-chang.png');
+}
+
+.ativos__ativo--bacuri h4::after {
+    background-image: url('../images/ativo-bacuri.png');
+}
+
+.ativos__ativo--girassol h4::after {
+    background-image: url('../images/ativo-oleo-de-girassol.png');
+}
+
+.ativos__ativo--ricino h4::after {
+    background-image: url('../images/ativo-ricino.png');
+}
+
+.ativos__lista li p {
+    text-align: center;
+}
+
+.dermo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 calc(var(--separador)*3) 0;
+    z-index: 1;
+}
+
+.dermo__conteudo::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    background-image: url('../images/simbolo-bodyblue.png');
+    width: 100vw;
+    height: 160vh;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 30%;
+}
+
+.dermo__conteudo {
+    max-width: var(--width-padrao);
+}
+
+.dermo__conteudo h4 {
+    margin-top: var(--separador);
+}
+
+.dermo__ilustracao {
+    background-image: url('../images/dermopigmentacao.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+    margin-bottom: calc(var(--separador)*3);
+}
+
+.dermo__partes {
+    display: flex;
+    flex-direction: column;
+}
+
+.dermo__partes li {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--bege);
+    margin-top: var(--separador)
+}
+
+.dermo__partes li::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: var(--separador);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dermo__parte--calcanhar::before {
+    background-image: url('../images/icone-calcanhar.png');
+}
+
+.dermo__parte--labio::before {
+    background-image: url('../images/icone-labio.png');
+}
+
+.dermo__parte--joelho::before {
+    background-image: url('../images/icone-joelho.png');
+}
+
+.dermo__parte--cotovelo::before {
+    background-image: url('../images/icone-cotovelo.png');
+}
+
+.cores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 calc(var(--separador)*3) 0;
+    z-index: 1;
+}
+
+.cores__ilustracao {
+    display: block;
+    width: var(--width-padrao);
+    height: 50vh;
+    background-image: url('../images/tres-bisnagas-de-hidrafilm.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+
+.cores__chamada {
+    width: var(--width-padrao);
+    margin-bottom: calc(var(--separador)*2);
+}
+
+
+/* menu social */
+
+.menu--social ul li {
+    display: inline-flex;
+    height: 50px;
+    align-items: center;
+    font-size: 28px;
+}
+
+.menu--social ul li a {   
+    margin-left: 10px;
+}
+
+/* adaptações para telas maiores */
+
+@media screen and (min-width:768px) {
+    .hero {
+        align-items: center;
+        justify-content: right;
+        background-position-x: unset;
+    }
+
+    .hero::before {
+        background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(107,51,115,0.7) 65%, rgba(17,11,26,1) 97%);
+    }
+    
+
+    .hero__conteudo {
+        width: 50%;
+    }
+
+    .nova_vida .wrapper {
+        flex-direction: row;
+        min-height: 100vh;
+    }
+
+    .nova_vida__conteudo {
+        max-width: 50%;
+    }
+
+    .nova_vida__icones {
+        display: flex;
+    }
+
+    .ideal {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+
+    .ideal .wrapper {
+        position: absolute;
+        max-width: 600px;
+        padding-left: 50%;
+    }
+
+    .ideal__conteudo {
+        max-width: unset;
+        padding-left: var(--separador);
+    }
+
+    .ideal__ilustracao {
+        width: 50%;
+        margin-bottom: unset;
+        height: 100vh;
+        background-attachment: unset;
+    }
+
+    .ativos {
+        padding: calc(var(--separador)*3) 0;
+        min-height: 100vh;
+        justify-content: space-around;
+    }
+
+    .ativos__lista {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ativos__lista li {
+        justify-content:stretch
+    }
+
+    .ativos__lista li:not(:last-of-type) {
+        margin-right: var(--separador);
+    }
+
+    .dermo {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+
+    .dermo .wrapper {
+        position: absolute;
+        max-width: 600px;
+        padding-left: 50%;
+    }
+
+    .dermo__conteudo {
+        max-width: unset;
+        padding-left: var(--separador);
+    }
+
+    .dermo__conteudo::before {
+        background-image: url('../images/simbolo-bodyblue.png');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: 30%;
+    }
+
+    .dermo__ilustracao {
+        width: 50%;
+        margin-bottom: unset;
+        height: 100vh;
+        background-attachment: unset;
+        z-index: 2;
+    }
+
+    .cores {
+        flex-direction: row;
+        min-height: 100vh;
+    }
+
+    .cores .wrapper {
+        position: absolute;
+        max-width: 600px;
+        padding-left: 50%;
+    }
+
+    .cores__conteudo {
+        max-width: unset;
+        padding-left: var(--separador);
+    }
+
+    .cores__chamada {
+        width: unset;
+    }
+
+    .cores__ilustracao {
+        width: 50%;
+        margin-bottom: unset;
+        height: 100vh;
+        background-attachment: unset;
+    }
+
+}
